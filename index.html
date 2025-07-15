@@ -4,74 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <!-- Preload Bootstrap CSS -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"></noscript>
-    <!-- Preconnect to CDN for faster loading -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <style>
-        /* Critical CSS - loaded first */
         body {
-            font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
             background-color: #f8f9fa;
         }
-        header {
+        .iframe-container {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            z-index: 1000;
-            height: 56px;
-        }
-        .iframe-container {
-            width: 100%;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
-            position: relative;
-            margin-top: 56px; /* Height of navbar */
+            height: 100%;
         }
         .iframe-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
             border: none;
         }
-        
-        /* Non-critical CSS */
-        @media (max-width: 768px) {
-            .container-fluid {
-                padding-left: 0;
-                padding-right: 0;
-            }
-            .iframe-container {
-                padding-top: 150%;
-            }
-        }
     </style>
-    <!-- Defer non-critical JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" defer></script>
 </head>
-<body>  
-    
-
-    <!-- Main content -->
-    <div class="container-fluid">
-        <div class="iframe-container">
-            <iframe src="https://script.google.com/macros/s/AKfycbwgDS7URPqCPK9z_1tjG1FFYZXAqErjKfTG4HqLfikOQCxdZ89mC2HxHkQkTrMAWb2e/exec?embedded=true" loading="lazy"></iframe>
-        </div>
+<body>
+    <div class="iframe-container">
+        <iframe src="https://script.google.com/macros/s/AKfycbwgDS7URPqCPK9z_1tjG1FFYZXAqErjKfTG4HqLfikOQCxdZ89mC2HxHkQkTrMAWb2e/exec?embedded=true" loading="lazy"></iframe>
     </div>
-
-    <!-- Load scripts after content -->
-    <script>
-        // Load non-critical resources after page load
-        window.addEventListener('load', function() {
-            // Load any additional scripts here
-        });
-    </script>
 </body>
 </html>
